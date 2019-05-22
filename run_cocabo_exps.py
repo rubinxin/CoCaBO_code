@@ -3,8 +3,8 @@
 #  CoCaBO Algorithms 
 # =============================================================================
 import sys
-sys.path.append('../bayesopt')
-sys.path.append('../ml_utils')
+# sys.path.append('../bayesopt')
+# sys.path.append('../ml_utils')
 import argparse
 import os
 import testFunctions.syntheticFunctions

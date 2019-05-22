@@ -7,12 +7,12 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 
-from bayesopt.batch_bo import BatchBOHeuristic
-from bayesopt.executor import JobExecutorInSeriesBlocking
-from bayesopt.util import add_hallucinations_to_x_and_y
+from utils.bayesopt.batch_bo import BatchBOHeuristic
+from utils.bayesopt.executor import JobExecutorInSeriesBlocking
+from utils.bayesopt.util import add_hallucinations_to_x_and_y
 from methods.CoCaBO_Base import CoCaBO_Base
-from ml_utils.models import GP
-from ml_utils.models.additive_gp import MixtureViaSumAndProduct, \
+from utils.ml_utils.models import GP
+from utils.ml_utils.models.additive_gp import MixtureViaSumAndProduct, \
     CategoryOverlapKernel, GPWithSomeFixedDimsAtStart
 
 

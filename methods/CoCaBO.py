@@ -7,12 +7,12 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 
-from bayesopt.acquisition import AcquisitionOnSubspace, EI, UCB
+from utils.bayesopt.acquisition import AcquisitionOnSubspace, EI, UCB
 from methods.CoCaBO_Base import CoCaBO_Base
-from ml_utils.models import GP
-from ml_utils.models.additive_gp import MixtureViaSumAndProduct, \
+from utils.ml_utils.models import GP
+from utils.ml_utils.models.additive_gp import MixtureViaSumAndProduct, \
     CategoryOverlapKernel
-from ml_utils.optimization import sample_then_minimize
+from utils.ml_utils.optimization import sample_then_minimize
 
 ''' Sequential CoCaBO algorithm '''
 class CoCaBO(CoCaBO_Base):
