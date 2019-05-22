@@ -70,7 +70,7 @@ if __name__ == '__main__':
     parser.add_argument('-tl', '--trials', help='Number of random trials. Default = 20',
                         default=20, type=int)
     parser.add_argument('-b', '--batch', help='Batch size. Default = 1',
-                        default=1, type=int)
+                        default=4, type=int)
 
     args = parser.parse_args()
     print(f"Got arguments: \n{args}")
