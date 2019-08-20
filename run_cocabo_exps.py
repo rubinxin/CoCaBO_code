@@ -80,7 +80,7 @@ if __name__ == '__main__':
     parser.add_argument('-tl', '--trials', help='Number of random trials. Default = 20',
                         default=20, type=int)
     parser.add_argument('-b', '--batch', help='Batch size (>1 for batch CoCaBO and =1 for sequential CoCaBO). Default = 1',
-                        default=1, type=int)
+                        default=2, type=int)
 
     args = parser.parse_args()
     print(f"Got arguments: \n{args}")

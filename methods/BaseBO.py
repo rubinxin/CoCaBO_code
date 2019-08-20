@@ -62,7 +62,7 @@ class BaseBO():
             for j in range(self.initN):
                 ht_list = list(hinit[j])
                 yinit[j] = self.f(ht_list, Xinit[j])
-                print(ht_list, Xinit[j], yinit[j])
+                # print(ht_list, Xinit[j], yinit[j])
 
             init_data = {}
             init_data['Z_init'] = Zinit

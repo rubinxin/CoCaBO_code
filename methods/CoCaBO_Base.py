@@ -72,7 +72,7 @@ class CoCaBO_Base(BaseBO):
         x_tries = np.random.uniform(0, np.max(Wc), size=(100, 1))
         y_tries = [single_evaluation(val) for val in x_tries]
         # find x optimal for init
-        print(f'ytry_len={len(y_tries)}')
+        # print(f'ytry_len={len(y_tries)}')
         idx_min = np.argmin(y_tries)
         x_init_min = x_tries[idx_min]
 
@@ -165,7 +165,7 @@ class CoCaBO_Base(BaseBO):
             C = self.C_list[j]
             gamma = gamma_list[j]
             probabilityDistribution = probabilityDistribution_list[j]
-            print(f'cat_var={j}, prob={probabilityDistribution}')
+            # print(f'cat_var={j}, prob={probabilityDistribution}')
 
             if batch_size > 1:
                 ht_batch_list = ht_batch_list.astype(int)
@@ -290,8 +290,8 @@ class CoCaBO_Base(BaseBO):
             if self.model_hp is None:
                 self.model_hp = model.param_array
             else:
-                print(self.model_hp)
-                print(model.param_array)
+                # print(self.model_hp)
+                # print(model.param_array)
                 # previous iter learned mix, so remove mix before setting
                 if len(model.param_array) < len(self.model_hp):
                     model.param_array = self.model_hp[1:]

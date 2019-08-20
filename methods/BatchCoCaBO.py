@@ -125,7 +125,7 @@ class BatchCoCaBO(CoCaBO_Base):
 
         opt_flag, gp = self.set_model_params_and_opt_flag(gp)
         if opt_flag:
-            print("\noptimising!\n")
+            # print("\noptimising!\n")
             gp.optimize()
         self.model_hp = gp.param_array
 
@@ -199,7 +199,7 @@ class BatchCoCaBO(CoCaBO_Base):
             y_batch_next[b] = y_next
 
         # Append recommeded data
-        self.mix_used = gp.kern.mix
+        self.mix_used = gp.kern.mix[0]
         self.data[0] = np.row_stack((self.data[0], z_batch_next))
         self.result[0] = np.row_stack((self.result[0], y_batch_next))
 
@@ -208,8 +208,10 @@ class BatchCoCaBO(CoCaBO_Base):
             ht_next_batch_list, self.batch_size)
 
         bestval_ht = np.max(self.result[0] * -1)
+        # print(f'arm pulled={ht_next_batch_list[:]} ; '
+        #       f'\n rewards = {ht_batch_list_rewards[:]}; '
+        #       f'y_best = {bestval_ht}; mix={self.mix_used}')
         print(f'arm pulled={ht_next_batch_list[:]} ; '
-              f'\n rewards = {ht_batch_list_rewards[:]}; '
               f'y_best = {bestval_ht}; mix={self.mix_used}')
 
         return ht_batch_list_rewards

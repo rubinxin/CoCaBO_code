@@ -119,7 +119,7 @@ class CoCaBO(CoCaBO_Base):
 
         opt_flag, gp = self.set_model_params_and_opt_flag(gp)
         if opt_flag:
-            print("\noptimising!\n")
+            # print("\noptimising!\n")
             gp.optimize()
         self.model_hp = gp.param_array
 
@@ -166,8 +166,9 @@ class CoCaBO(CoCaBO_Base):
         ht_list_rewards = list(ht_list_rewards.flatten())
 
         bestval_ht = np.max(self.result[0] * -1)
-        print(f'arm pulled={ht_next_list[:]} ; rewards = {ht_list_rewards[:]};'
-              f' y_best = {bestval_ht}; mix={self.mix_used}')
+        # print(f'arm pulled={ht_next_list[:]} ; rewards = {ht_list_rewards[:]};'
+        #       f' y_best = {bestval_ht}; mix={self.mix_used}')
+        print(f'arm pulled={ht_next_list[:]}; y_best = {bestval_ht}; mix={self.mix_used}')
 
         return ht_list_rewards
 

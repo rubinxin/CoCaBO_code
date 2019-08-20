@@ -1,4 +1,16 @@
-# Code for Bayesian Optimisation over Multiple Continuous and Categorical Inputs
+# Bayesian Optimisation over Multiple Continuous and Categorical Inputs
+
+We propose a new Bayesian optimisation approach for optimising a black-box function
+with multiple continuous and categorical inputs, termed Continuous and Categorical Bayesian Optimisation (CoCaBO) and this is the Python code repository. For more details on the method, please read our paper [Bayesian Optimisation over Multiple Continuous and Categorical Inputs](https://arxiv.org/abs/1906.08878). 
+
+### Dependencies:
+* python 3
+* numpy
+* scipy
+* matplotlib
+* tqdm
+* gpy
+* pandas
 
 ### Usage:
 Run CoCaBO experiments: `python run_cocabo_exps.py` followed by the following flags:
@@ -10,14 +22,17 @@ Run CoCaBO experiments: `python run_cocabo_exps.py` followed by the following fl
  
   E.g. `python run_cocabo_exps.py -f='func3C' -n=200 -tl=40 -mix=0.0 -b=1`
   
+### Citation
+Please cite our paper if you would like to use the code.
+
+```
+@article{ru2019bayesian,
+  title={Bayesian Optimisation over Multiple Continuous and Categorical Inputs},
+  author={Ru, Binxin and Alvi, Ahsan S and Nguyen, Vu and Osborne, Michael A and Roberts, Stephen J},
+  journal={arXiv preprint arXiv:1906.08878},
+  year={2019}
+}
+```
 
 
-### Dependencies:
-* python 3
-* numpy
-* scipy
-* matplotlib
-* tqdm
-* GPy
-* pandas
 
