@@ -14,11 +14,12 @@ from methods.BatchCoCaBO import BatchCoCaBO
 
 def CoCaBO_Exps(obj_func, budget, initN=24 ,trials=40, kernel_mix = 0.5, batch=None):
 
+    # define saving path for saving the results
     saving_path = f'data/syntheticFns/{obj_func}/'
-
     if not os.path.exists(saving_path):
         os.makedirs(saving_path)
 
+    # define the objective function
     if obj_func == 'func2C':
         f = testFunctions.syntheticFunctions.func2C
         categories = [3, 5]
@@ -43,11 +44,13 @@ def CoCaBO_Exps(obj_func, budget, initN=24 ,trials=40, kernel_mix = 0.5, batch=N
 
     # Run CoCaBO Algorithm
     if batch == 1:
+        # sequential CoCaBO
         mabbo = CoCaBO(objfn=f, initN=initN, bounds=bounds,
                        acq_type='LCB', C=categories,
                        kernel_mix = kernel_mix)
 
     else:
+        # batch CoCaBO
         mabbo = BatchCoCaBO(objfn=f, initN=initN, bounds=bounds,
                             acq_type='LCB', C=categories,
                             kernel_mix=kernel_mix,
@@ -69,8 +72,8 @@ if __name__ == '__main__':
                         default=100, type=int)
     parser.add_argument('-tl', '--trials', help='Number of random trials. Default = 20',
                         default=20, type=int)
-    parser.add_argument('-b', '--batch', help='Batch size. Default = 1',
-                        default=4, type=int)
+    parser.add_argument('-b', '--batch', help='Batch size (>1 for batch CoCaBO and =1 for sequential CoCaBO). Default = 1',
+                        default=1, type=int)
 
     args = parser.parse_args()
     print(f"Got arguments: \n{args}")
