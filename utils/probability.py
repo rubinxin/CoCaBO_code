@@ -1,4 +1,11 @@
 # -*- coding: utf-8 -*-
+#==========================================
+# Title:  probability.py
+# Author: Binxin Ru and Ahsan Alvi
+# Date:   20 August 2019
+# Link:   https://arxiv.org/abs/1906.08878
+#==========================================
+
 """
 Created based on
 https://jeremykun.com/2013/11/08/adversarial-bandits-and-the-exp3-algorithm/

@@ -1,3 +1,11 @@
+# -*- coding: utf-8 -*-
+#==========================================
+# Title:  misc.py
+# Author: Binxin Ru and Ahsan Alvi
+# Date:   20 August 2019
+# Link:   https://arxiv.org/abs/1906.08878
+#==========================================
+
 """Misc utilities"""
 
 import multiprocessing as mp

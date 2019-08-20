@@ -1,5 +1,10 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+#==========================================
+# Title:  syntheticFunctions.py
+# Author: Binxin Ru and Ahsan Alvi
+# Date:   20 August 2019
+# Link:   https://arxiv.org/abs/1906.08878
+#==========================================
 
 import numpy as np
 

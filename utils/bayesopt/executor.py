@@ -1,3 +1,11 @@
+# -*- coding: utf-8 -*-
+#==========================================
+# Title:  executor.py
+# Author: Binxin Ru and Ahsan Alvi
+# Date:   20 August 2019
+# Link:   https://arxiv.org/abs/1906.08878
+#==========================================
+
 """
 This module contains the utility classes for asynchronous Bayesian optimization
 """

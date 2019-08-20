@@ -1,4 +1,12 @@
 # -*- coding: utf-8 -*-
+#==========================================
+# Title:  DepRound.py
+# Author: Binxin Ru and Ahsan Alvi
+# Date:   20 August 2019
+# Link:   https://arxiv.org/abs/1906.08878
+#==========================================
+
+
 """ :func:`DepRound`: implementation of the dependent rounding procedure, from [[Dependent rounding and its applications to approximation algorithms, by R Gandhi, S Khuller, S Parthasarathy, Journal of the ACM, 2006](http://dl.acm.org/citation.cfm?id=1147956)].
 It solves the problem of efficiently selecting a set of :math:`k` distinct actions from :math:`\{1,\dots,K\}`, while satisfying the condition that each action :math:`i` is selected with probability :math:`p_i` exactly.
 The distribution :math:`(p_1, \dots, p_K)` on :math:`\{1,\dots,K\}` is assumed to be given.
