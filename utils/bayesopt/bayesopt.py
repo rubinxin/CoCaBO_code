@@ -13,7 +13,6 @@ from typing import Tuple, Callable, Optional, Dict, Union
 import numpy as np
 import pandas as pd
 import pylab as plt
-import scipydirect
 
 from utils.bayesopt.acquisition import AcquisitionOnSubspace
 from .acquisition import AcquisitionFunction, EI, PI, UCB

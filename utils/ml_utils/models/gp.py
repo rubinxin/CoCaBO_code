@@ -21,7 +21,6 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import scipy as sp
-import scipydirect
 from scipy.optimize import OptimizeResult
 
 from ..misc import timed_print as print

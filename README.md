@@ -10,3 +10,14 @@ Run CoCaBO experiments: `python run_cocabo_exps.py` followed by the following fl
  
   E.g. `python run_cocabo_exps.py -f='func3C' -n=200 -tl=40 -mix=0.0 -b=1`
   
+
+
+### Dependencies:
+* python 3
+* numpy
+* scipy
+* matplotlib
+* tqdm
+* GPy
+* pandas
+
